@@ -155,10 +155,6 @@ See [DEPLOYMENT.md](DEPLOYMENT.md) for detailed instructions.
 ![Port Forward](screenshots/port-forward.png)
 *kubectl port-forward command to access frontend*
 
-#### 6. Application Access
-![Application Running](screenshots/app-running.png)
-*Frontend accessible at localhost:5000 through port forwarding*
-
 ### Application Screenshots
 
 #### Registration Form
