@@ -1,0 +1,15 @@
+frontend:
+  image: namanss/flask-registration-frontend:latest
+  replicas: 2
+  servicePort: 5000
+  serviceType: LoadBalancer
+  backend: http://backend.{{ .Values.namespace }}.svc.cluster.local:3000
+
+backend:
+  image: namanss/flask-registration-backend:latest
+  replicas: 1
+  servicePort: 3000
+  mongoURL: "mongodb+srv://username:password@cluster0.xxxxx.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+  serviceType: ClusterIP
+
+namespace: audrie
