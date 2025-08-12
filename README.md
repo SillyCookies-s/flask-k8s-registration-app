@@ -81,15 +81,17 @@ Flask_Application/
 ├── .gitignore                  # Git ignore file
 ├── docker-compose.yml          # Multi-container Docker setup
 ├── DEPLOYMENT.md               # Kubernetes deployment guide
-├── Flask_MongoDB_Documented.docx # Project documentation
 └── README.md                   # Project documentation
 ```
 
 ## Setup Instructions
 
 ### Prerequisites
-- Python 
+- Python 3.x
 - MongoDB Atlas account and cluster
+- Docker (for containerization)
+- Minikube (for Kubernetes deployment)
+- Helm (for Kubernetes package management)
 
 ### Backend Setup
 1. Navigate to backend directory: `cd backend`
@@ -127,9 +129,9 @@ See [DEPLOYMENT.md](DEPLOYMENT.md) for detailed instructions.
 
 ### CI/CD Pipeline
 - Automatic Docker image builds on push to `tree` branch
-- Images pushed to Docker Hub:
-  - `namanss/flask-registration-frontend:latest`
-  - `namanss/flask-registration-backend:latest`
+- Images pushed to Docker Hub with incremental version tags:
+  - `namanss/flask-registration-frontend:v1, v2, v3...`
+  - `namanss/flask-registration-backend:v1, v2, v3...`
 
 ## Screenshots
 
